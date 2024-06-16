@@ -92,7 +92,7 @@ return {
   {
     "nvimtools/none-ls.nvim",
     event = "VeryLazy",
-    ft = { "python", "go", "json" },
+    ft = { "python" },
     dependencies = {
       "nvimtools/none-ls-extras.nvim",
     },
