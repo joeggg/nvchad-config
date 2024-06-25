@@ -71,6 +71,14 @@ return {
     "sindrets/diffview.nvim",
     lazy = false,
   },
+  -- Auto create/open a session
+  {
+    "rmagatti/auto-session",
+    lazy = false,
+    opts = {
+      auto_save_enabled = true,
+    },
+  },
   -- Rust LSP server, also provides inlay hints
   {
     "mrcjkb/rustaceanvim",
