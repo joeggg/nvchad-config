@@ -37,7 +37,7 @@ M.ui = {
     -- GitSignsChange = { bg = "blue", fg = "blue" },
     -- GitSignsChangeLn = { bg = "blue", fg = "blue" },
     -- GitSignsChangeNr = { bg = "blue", fg = "blue" },
-    -- LspInlayHint = { fg = "white" },
+    LspInlayHint = { fg = "light_grey", bg = "NONE" },
     -- NonText = {fg = "light_grey"}
   },
 }

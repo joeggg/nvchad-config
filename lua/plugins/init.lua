@@ -62,6 +62,25 @@ return {
       },
     },
   },
+  -- Debugging
+  {
+    "mfussenegger/nvim-dap",
+    ft = { "cpp" },
+    config = function()
+      require "configs.dap"
+    end,
+  },
+  {
+    "rcarriga/nvim-dap-ui",
+    event = "VeryLazy",
+    dependencies = {
+      "mfussenegger/nvim-dap",
+      "nvim-neotest/nvim-nio",
+    },
+    config = function()
+      require "configs.dap-ui"
+    end,
+  },
   {
     "lewis6991/gitsigns.nvim",
     opts = { current_line_blame = true },

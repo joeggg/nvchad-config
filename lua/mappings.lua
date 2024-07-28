@@ -5,6 +5,14 @@ local map = vim.keymap.set
 map("n", ";", ":", { desc = "CMD enter command mode" })
 map("i", "jk", "<ESC>")
 
+map("n", "<leader>b", function()
+  vim.cmd "DapToggleBreakpoint"
+end, { desc = "Toggle breakpoint" })
+
+map("n", "<leader>db", function()
+  vim.cmd "DapContinue"
+end, { desc = "Toggle breakpoint" })
+
 map("n", "<leader>df", function()
   if next(require("diffview.lib").views) == nil then
     vim.cmd "DiffviewOpen"
