@@ -57,4 +57,6 @@ lspconfig.clangd.setup {
   end,
   on_init = on_init,
   capabilities = capabilities,
+  -- uncomment if programming for stm32
+  -- cmd = { "clangd", "--query-driver=/home/joe/arm-gnu-toolchain/bin/arm-none-eabi*" },
 }
