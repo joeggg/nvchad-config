@@ -14,6 +14,10 @@ return {
       require "configs.lspconfig"
     end,
   },
+  {
+    "nvim-tree/nvim-tree.lua",
+    opts = { git = { ignore = false }, filters = { dotfiles = false } },
+  },
   -- LSPs to download
   {
     "williamboman/mason.nvim",
