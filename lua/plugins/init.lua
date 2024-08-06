@@ -93,6 +93,17 @@ return {
   {
     "sindrets/diffview.nvim",
     lazy = false,
+    opts = function()
+      local actions = require "diffview.actions"
+      return {
+        keymaps = {
+          file_panel = {
+            { "n", "j", actions.prev_entry, { desc = "Bring the cursor to the previous file entry" } },
+            { "n", "k", actions.next_entry, { desc = "Bring the cursor to the next file entry" } },
+          },
+        },
+      }
+    end,
   },
   -- Auto create/open a session
   {
