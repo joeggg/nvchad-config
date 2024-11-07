@@ -60,3 +60,10 @@ lspconfig.clangd.setup {
   -- uncomment if programming for stm32
   -- cmd = { "clangd", "--query-driver=/home/joe/arm-gnu-toolchain/bin/arm-none-eabi*" },
 }
+
+lspconfig.lemminx.setup {
+  on_attach = on_attach,
+  on_init = on_init,
+  capabilities = capabilities,
+  filetypes = { "xml", "xacro", "urdf" },
+}

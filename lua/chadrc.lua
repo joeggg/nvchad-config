@@ -14,13 +14,21 @@ M.ui = {
   },
   hl_override = {
     ["@comment"] = { fg = "light_grey" },
+    LspInlayHint = { fg = "light_grey", bg = "NONE" },
+
+    -- Indent blankline Context
     IblScopeChar = { fg = "nord_blue" },
     IndentBlanklineContextChar = { fg = { "blue", -20 } },
+
+    -- Line numbers
+    CursorLineNr = { fg = { "blue", -10 } },
+    LineNr = { fg = { "light_grey", 0 } },
+
     -- for darker colour schemes
     -- TelescopeSelection = { bg = { "blue", -40 } },
     -- Visual = { bg = { "blue", -40 } },
     -- for lighter colour schemes
-    TelescopeSelection = { bg = { "blue", -60 } },
+    TelescopeSelection = { bg = { "nord_blue", -50 } },
     Visual = { bg = { "nord_blue", -50 } },
 
     -- Diff preview changes highlighting
@@ -37,7 +45,7 @@ M.ui = {
     -- GitSignsChange = { bg = "blue", fg = "blue" },
     -- GitSignsChangeLn = { bg = "blue", fg = "blue" },
     -- GitSignsChangeNr = { bg = "blue", fg = "blue" },
-    LspInlayHint = { fg = "light_grey", bg = "NONE" },
+
     -- NonText = {fg = "light_grey"}
   },
 }
