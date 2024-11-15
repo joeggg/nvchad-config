@@ -6,7 +6,7 @@ local options = {
     },
     ruff_fix = {
       command = ".venv/bin/ruff",
-      prepend_args = { "--select", "I,F401" },
+      prepend_args = { "check", "--select", "I,F401" },
     },
   },
 
