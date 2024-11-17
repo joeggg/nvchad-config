@@ -16,10 +16,10 @@ M.ui = {
 }
 
 M.base46 = {
-  theme = "pastelDark",
+  theme = "catppuccin",
   hl_override = {
-    ["@comment"] = { fg = "light_grey", italic = true },
-    LspInlayHint = { fg = "light_grey", bg = "NONE" },
+    ["@comment"] = { fg = { "light_grey", 10 } },
+    NonText = { fg = { "grey", 10 }, bg = "NONE" },
 
     -- Indent blankline Context
     IblScopeChar = { fg = "nord_blue" },
