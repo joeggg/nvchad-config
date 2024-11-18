@@ -18,6 +18,9 @@ M.ui = {
 M.base46 = {
   theme = "catppuccin",
   hl_override = {
+    NvimTreeGitDirty = { fg = { "orange", -5 } },
+    NvimTreeGitNew = { fg = { "green", -5 } },
+
     ["@comment"] = { fg = { "light_grey", 10 } },
     NonText = { fg = { "grey", 10 }, bg = "NONE" },
 
@@ -29,19 +32,9 @@ M.base46 = {
     CursorLineNr = { fg = { "blue", -10 } },
     LineNr = { fg = { "light_grey", 0 } },
 
-    -- for darker colour schemes
-    -- TelescopeSelection = { bg = { "blue", -40 } },
-    -- Visual = { bg = { "blue", -40 } },
-    -- for lighter colour schemes
     TelescopeSelection = { bg = { "nord_blue", -50 } },
     Visual = { bg = { "nord_blue", -50 } },
 
-    -- Diff preview changes highlighting
-    -- for darker colour schemes
-    -- DiffAdd = { fg = "NONE", bg = { "nord_blue", -35 } },
-    -- DiffDelete = { fg = "NONE", bg = { "red", -45 } },
-    -- DiffText = { fg = "NONE", bg = { "sun", -50 } },
-    -- for lighter colour schemes
     DiffAdd = { fg = "NONE", bg = { "nord_blue", -55 } },
     DiffDelete = { fg = "NONE", bg = { "red", -60 } },
     DiffText = { fg = "NONE", bg = { "sun", -65 } },

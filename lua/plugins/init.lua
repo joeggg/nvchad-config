@@ -13,7 +13,11 @@ return {
   },
   {
     "nvim-tree/nvim-tree.lua",
-    opts = { git = { ignore = false }, filters = { dotfiles = false } },
+    opts = {
+      filters = { git_ignored = false },
+      view = { float = { enable = true } },
+      renderer = { icons = { glyphs = { git = { unstaged = "!" } } } },
+    },
   },
   -- LSPs to download
   {
