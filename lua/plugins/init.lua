@@ -165,4 +165,8 @@ return {
       return require "configs.none-ls"
     end,
   },
+  {
+    "github/copilot.vim",
+    lazy = false,
+  },
 }
