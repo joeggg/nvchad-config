@@ -6,7 +6,7 @@ local options = {
     },
     ruff_fix = {
       command = ".venv/bin/ruff",
-      prepend_args = { "check", "--select", "I,F401" },
+      prepend_args = { "check", "--select", "I,F401,RUF022" },
     },
   },
 
@@ -24,6 +24,7 @@ local options = {
     sql = { "pg_format" },
     cpp = { "clang-format" },
     rust = { "rustfmt" },
+    proto = { "clang-format" },
   },
 
   format_on_save = {

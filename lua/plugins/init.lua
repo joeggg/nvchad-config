@@ -52,6 +52,7 @@ return {
         "clang-format",
         "json-lsp",
         "pyright",
+        "debugpy",
         "rust-analyzer",
         "gopls",
         "typescript-language-server",
@@ -95,6 +96,18 @@ return {
     ft = { "cpp" },
     config = function()
       require "configs.dap"
+    end,
+  },
+  {
+    "mfussenegger/nvim-dap-python",
+    dependencies = {
+      "mfussenegger/nvim-dap",
+      "rcarriga/nvim-dap-ui",
+    },
+    ft = { "python" },
+    config = function()
+      local path = "~/.local/share/nvim/mason/packages/debugpy/venv/bin/python"
+      require("dap-python").setup(path)
     end,
   },
   {
