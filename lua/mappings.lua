@@ -24,13 +24,41 @@ map({ "n", "v", "s", "o" }, "<C-l>", function()
   vim.cmd "NvimTreeToggle"
 end)
 
+-- DEBUGGING
+
+local dap = require "dap"
+local dapui = require "dapui"
+local dappython = require "dap-python"
+
 map("n", "<leader>b", function()
-  vim.cmd "DapToggleBreakpoint"
+  dap.toggle_breakpoint()
 end, { desc = "Toggle breakpoint" })
 
 map("n", "<leader>db", function()
-  vim.cmd "DapContinue"
-end, { desc = "Toggle breakpoint" })
+  dap.continue()
+end, { desc = "DAP continue" })
+
+map("n", "<leader>du", function()
+  dapui.toggle()
+end, { desc = "Toggle DAP UI" })
+
+map("n", "<leader>dp", function()
+  dappython.test_method()
+end, { desc = "DAP Python test method" })
+
+map("n", "<leader>so", function()
+  dap.step_over()
+end, { desc = "DAP step over" })
+
+map("n", "<leader>si", function()
+  dap.step_into()
+end, { desc = "DAP step into" })
+
+map("n", "<leader>st", function()
+  dap.step_out()
+end, { desc = "DAP step out" })
+
+-- DIFFVIEW
 
 map("n", "<leader>df", function()
   if next(require("diffview.lib").views) == nil then
